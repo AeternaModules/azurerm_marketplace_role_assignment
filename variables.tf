@@ -23,7 +23,7 @@ EOT
     name                                   = optional(string)
     role_definition_id                     = optional(string)
     role_definition_name                   = optional(string)
-    skip_service_principal_aad_check       = optional(bool, false)
+    skip_service_principal_aad_check       = optional(bool) # Default: false
   }))
 }
 
