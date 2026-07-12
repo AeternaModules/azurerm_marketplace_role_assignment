@@ -1,3 +1,7 @@
+output "marketplace_role_assignments_id" {
+  description = "Map of id values across all marketplace_role_assignments, keyed the same as var.marketplace_role_assignments"
+  value       = { for k, v in azurerm_marketplace_role_assignment.marketplace_role_assignments : k => v.id }
+}
 output "marketplace_role_assignments_condition" {
   description = "Map of condition values across all marketplace_role_assignments, keyed the same as var.marketplace_role_assignments"
   value       = { for k, v in azurerm_marketplace_role_assignment.marketplace_role_assignments : k => v.condition }
